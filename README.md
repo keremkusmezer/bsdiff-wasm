@@ -15,7 +15,7 @@ npm install bsdiff-wasm
 # Usage
 Examples of an operation equivalent to `bsdiff old.bin new.bin patch.bsdiff`.
 
-For more information, see [test](./test) or [docs](./docs) and [demo page](https://kairi003.github.io/bsdiff-wasm/).
+For more information, see [test](./test), [docs](./docs) or [demo page](https://kairi003.github.io/bsdiff-wasm/).
 
 ## browser
 ```html
