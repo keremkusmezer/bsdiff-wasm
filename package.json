@@ -1,6 +1,6 @@
 {
   "name": "bsdiff-wasm",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "bsdiff/bspatch compiled to WebAssembly",
   "type": "module",
   "exports": {
