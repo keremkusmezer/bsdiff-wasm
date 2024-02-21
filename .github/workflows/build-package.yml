@@ -1,0 +1,33 @@
+name: build-package
+
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Submodule update
+        run: git submodule update --init --recursive
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      
+      - name: Pull container
+        run: docker pull kairi003/bsdiff-wasm-build:latest
+
+      - name: Install dependencies and build, test
+        run: npm ci
+      
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bsdiff-wasm-dist
+          path: dist/
+          retention-days: 1
