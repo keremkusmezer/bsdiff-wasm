@@ -14,12 +14,14 @@
     "test"
   ],
   "scripts": {
+    "postinstall": "npm run build:release",
     "build": "docker run --rm -v $PWD:/src -u $(id -u):$(id -g) -w /src -e DEBUG kairi003/bsdiff-wasm-build /bin/bash build.sh",
     "build:release": "cross-env DEBUG=0 npm run build",
     "build:debug": "cross-env DEBUG=1 npm run build",
-    "pretest": "npm run prepare",
+    "postbuild": "node postbuild.js && npm test",
     "test": "mocha",
-    "prepare": "node prepare.js"
+    "prepublishOnly": "npm test",
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",

@@ -51,7 +51,7 @@ Some commands need to be modified for windows because it is designed for bash.
 ```sh
 docker build -t bsdiff-wasm-build .
 docker run --rm -v $PWD:/src -u $(id -u):$(id -g) -w /src bsdiff-wasm-build /bin/bash build.sh
-bash prepare.sh
+bash postbuild.sh
 ```
 
 ## npm
@@ -59,7 +59,6 @@ bash prepare.sh
 ```sh
 npm install
 npm run build:release
-npm run prepare
 ```
 
 # Test
