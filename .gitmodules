@@ -1,3 +1,4 @@
 [submodule "bsdiff"]
 	path = bsdiff
 	url = https://salsa.debian.org/debian/bsdiff.git
+	ignore = dirty
