@@ -7,20 +7,24 @@ The original was developed by Colin Percival. Please see http://www.daemonology.
 
 Demo: https://kairi003.github.io/bsdiff-wasm/
 
-# Install
+## Install
+
 ```sh
 npm install bsdiff-wasm
 ```
+or use any CDN service like https://unpkg.com/bsdiff-wasm
 
-# Usage
+## Usage
+
 Examples of an operation equivalent to `bsdiff old.bin new.bin patch.bsdiff`.
 
 For more information, see [test](./test), [docs](./docs) or [demo page](https://kairi003.github.io/bsdiff-wasm/).
 
-## browser
+### browser
+
 ```html
 <script type="module">
-  import { loadBsdiff, loadBspatch } from 'https://cdn.jsdelivr.net/npm/bsdiff-wasm';
+  import { loadBsdiff, loadBspatch } from 'https://unpkg.com/bsdiff-wasm';
   const bsdiff = await loadBsdiff();
   await fetch('./old.bin')
     .then(res => res.arrayBuffer())
@@ -34,7 +38,8 @@ For more information, see [test](./test), [docs](./docs) or [demo page](https://
 </script>
 ```
 
-## node.js
+### node.js
+
 ```js
 import { loadBsdiff, loadBspatch } from 'bsdiff-wasm';
 const bsdiff = await loadBsdiff();
@@ -45,10 +50,11 @@ bsdiff.FS.chdir(workdir);
 bsdiff.callMain(['old.bin', 'new.bin', 'patch.bsdiff']);
 ```
 
-# Build
+## Build
+
 Some commands need to be modified for windows because it is designed for bash.
 
-## shell
+### shell
 
 ```sh
 docker build -t bsdiff-wasm-build .
@@ -56,14 +62,15 @@ docker run --rm -v $PWD:/src -u $(id -u):$(id -g) -w /src bsdiff-wasm-build /bin
 bash postbuild.sh
 ```
 
-## npm
+### npm
 
 ```sh
 npm install
 npm run build:release
 ```
 
-# Test
+## Test
+
 Probably cross-platform.
 
 ```sh
