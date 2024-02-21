@@ -5,6 +5,8 @@
 This is a rebuild of [bsdiff (4.3-23)](https://packages.debian.org/en/bookworm/bsdiff) maintained by debian and is fully compatible.
 The original was developed by Colin Percival. Please see http://www.daemonology.net/bsdiff/.
 
+Demo: https://kairi003.github.io/bsdiff-wasm/
+
 # Install
 ```sh
 npm install bsdiff-wasm
@@ -13,7 +15,7 @@ npm install bsdiff-wasm
 # Usage
 Examples of an operation equivalent to `bsdiff old.bin new.bin patch.bsdiff`.
 
-For more information, see [test](./test).
+For more information, see [test](./test) or [docs](./docs) and [demo page](https://kairi003.github.io/bsdiff-wasm/).
 
 ## browser
 ```html

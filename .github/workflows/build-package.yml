@@ -22,7 +22,7 @@ jobs:
       - name: Pull container
         run: docker pull kairi003/bsdiff-wasm-build:latest
 
-      - name: Install dependencies and build, test
+      - name: Install dependencies, build and test
         run: npm ci
       
       - name: Upload artifact
