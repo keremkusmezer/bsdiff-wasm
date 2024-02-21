@@ -50,5 +50,5 @@ fn_build () {
     -lworkerfs.js
 }
 
-fn_build bsdiff loadBSDiff
-fn_build bspatch loadBSPatch
+fn_build bsdiff loadBsdiff
+fn_build bspatch loadBspatch

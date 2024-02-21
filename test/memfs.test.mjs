@@ -1,5 +1,5 @@
 import assert from 'assert';
-import { loadBSDiff, loadBSPatch } from '../dist/main.mjs';
+import { loadBsdiff, loadBspatch } from '../dist/main.mjs';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -35,7 +35,7 @@ describe('memfs test for browser', function () {
   });
 
   it('test create diff', async () => {
-    const bsdiff = await loadBSDiff();
+    const bsdiff = await loadBsdiff();
     await writeFiles(bsdiff);
     const exitStatus = await bsdiff.callMain(['assets/egg_sushi.png', 'assets/tuna_sushi.png', 'out/egg_tuna.bsdiff']);
     assert.equal(exitStatus, 0, 'exitStatus === 0');
@@ -47,7 +47,7 @@ describe('memfs test for browser', function () {
   });
 
   it('test apply patch', async () => {
-    const bspatch = await loadBSPatch();
+    const bspatch = await loadBspatch();
     await writeFiles(bspatch);
     const exitStatus = await bspatch.callMain(['assets/egg_sushi.png', 'out/tuna_sushi.png', 'assets/egg_tuna.bsdiff']);
     assert.equal(exitStatus, 0, 'exitStatus === 0');

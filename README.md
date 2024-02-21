@@ -18,7 +18,7 @@ For more information, see [test](./test).
 ## browser
 ```html
 <script type="module">
-  import { loadBsdiff, loadBspatch } from './bsdiff-wasm.mjs';
+  import { loadBsdiff, loadBspatch } from 'https://unpkg.com/bsdiff-wasm@0.1.0/dist/main.mjs';
   const bsdiff = await loadBsdiff();
   await fetch('./old.bin')
     .then(res => res.arrayBuffer())
@@ -34,8 +34,8 @@ For more information, see [test](./test).
 
 ## node.js
 ```js
-import { loadBSDiff, loadBSPatch } from 'bsdiff-wasm';
-const bsdiff = await loadBSDiff();
+import { loadBsdiff, loadBspatch } from 'bsdiff-wasm';
+const bsdiff = await loadBsdiff();
 const workdir = '/working';
 bsdiff.FS.mkdir(workdir);
 bsdiff.FS.mount(bsdiff.NODEFS, { root: process.cwd() }, workdir);
