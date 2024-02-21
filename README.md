@@ -18,7 +18,7 @@ For more information, see [test](./test).
 ## browser
 ```html
 <script type="module">
-  import { loadBsdiff, loadBspatch } from 'https://unpkg.com/bsdiff-wasm@0.1.0/dist/main.mjs';
+  import { loadBsdiff, loadBspatch } from 'https://cdn.jsdelivr.net/npm/bsdiff-wasm';
   const bsdiff = await loadBsdiff();
   await fetch('./old.bin')
     .then(res => res.arrayBuffer())
