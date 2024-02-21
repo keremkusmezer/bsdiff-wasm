@@ -54,7 +54,7 @@ docker run --rm -v $PWD:/src -u $(id -u):$(id -g) -w /src bsdiff-wasm-build /bin
 bash prepare.sh
 ```
 
-## node.js
+## npm
 
 ```sh
 npm install
