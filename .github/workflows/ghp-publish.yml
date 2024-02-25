@@ -3,6 +3,7 @@ name: ghp-publish
 on:
   push:
     branches: [ master ]
+    tags-ignore: [ '*' ]
   workflow_dispatch:
 
 jobs:
