@@ -1,4 +1,4 @@
 #!/bin/bash
 
 mkdir -p dist
-cp js/main.mjs dist
+cp -r js/public dist
