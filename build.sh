@@ -18,10 +18,10 @@ fi
 
 # Apply patches
 
-cd $ROOT/bsdiff
-QUILT_PATCHES=$ROOT/bsdiff/debian/patches quilt push -a || true
-sed -i -e '/^#include.*cdefs.h/s:^://:' bspatch.c
-cd $ROOT
+#cd $ROOT/bsdiff
+#QUILT_PATCHES=$ROOT/bsdiff/debian/patches quilt push -a || true
+#sed -i -e '/^#include.*cdefs.h/s:^://:' bspatch.c
+#cd $ROOT
 
 # Build
 mkdir -p "$ROOT/dist"
